@@ -34,7 +34,7 @@ export default function Body() {
           </div>
 
           {/* Office Image */}
-          <div className="relative mt-6 sm:mt-10">
+          <div className="relative md:mt-6 sm:mt-10">
             <img
               src="/assets/Body1.png"
               alt="Creative Office"
