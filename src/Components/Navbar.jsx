@@ -1,8 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Prevent background scroll when sidebar is open
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isSidebarOpen]);
 
   return (
     <>
