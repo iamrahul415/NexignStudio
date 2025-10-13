@@ -1,8 +1,54 @@
 // src/components/Body.jsx
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function Body() {
+  const [isVisible, setIsVisible] = useState({
+    heading: false,
+    image1: false,
+    description: false,
+    image2: false,
+  });
+
+  const headingRef = useRef(null);
+  const image1Ref = useRef(null);
+  const descriptionRef = useRef(null);
+  const image2Ref = useRef(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const refName = entry.target.dataset.ref;
+          setIsVisible((prev) => ({ ...prev, [refName]: true }));
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const refs = [
+      { ref: headingRef, name: "heading" },
+      { ref: image1Ref, name: "image1" },
+      { ref: descriptionRef, name: "description" },
+      { ref: image2Ref, name: "image2" },
+    ];
+
+    refs.forEach(({ ref, name }) => {
+      if (ref.current) {
+        ref.current.dataset.ref = name;
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="about"
@@ -21,7 +67,17 @@ export default function Body() {
         {/* Left Column */}
         <div className="flex flex-col space-y-6 sm:space-y-8">
           {/* Heading */}
-          <div>
+          <div
+            ref={headingRef}
+            className={`
+              transition-all duration-1000 ease-out
+              ${
+                isVisible.heading
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }
+            `}
+          >
             <h1
               className="
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
@@ -34,7 +90,18 @@ export default function Body() {
           </div>
 
           {/* Office Image */}
-          <div className="relative md:mt-6 sm:mt-10">
+          <div
+            ref={image1Ref}
+            className={`
+              relative md:mt-6 sm:mt-10
+              transition-all duration-1000 ease-out delay-200
+              ${
+                isVisible.image1
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-12"
+              }
+            `}
+          >
             <img
               src="/assets/Body1.png"
               alt="Creative Office"
@@ -63,7 +130,17 @@ export default function Body() {
         {/* Right Column */}
         <div className="flex flex-col justify-start space-y-6 sm:space-y-8 pt-4 md:pt-0">
           {/* Description Text */}
-          <div>
+          <div
+            ref={descriptionRef}
+            className={`
+              transition-all duration-1000 ease-out delay-300
+              ${
+                isVisible.description
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }
+            `}
+          >
             <p
               className="
                 text-gray-300 leading-relaxed
@@ -79,7 +156,18 @@ export default function Body() {
           </div>
 
           {/* Woman Image */}
-          <div className="flex justify-start">
+          <div
+            ref={image2Ref}
+            className={`
+              flex justify-start
+              transition-all duration-1000 ease-out delay-500
+              ${
+                isVisible.image2
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-12"
+              }
+            `}
+          >
             <img
               src="/assets/women.jpg"
               alt="Creative Leader"

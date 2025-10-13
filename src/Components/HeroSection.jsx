@@ -7,11 +7,17 @@ const HeroSection = () => {
         bg-white px-4 sm:px-6 md:px-20 py-12 sm:py-16 relative overflow-hidden
         rounded-bl-[60px] sm:rounded-bl-[100px] md:rounded-bl-[150px]
         rounded-br-[60px] sm:rounded-br-[100px] md:rounded-br-[150px]
+        opacity-90 sm:opacity-100 transition-opacity
       "
     >
-      {/* Starburst Icon - Top Left */}
-      <div className="absolute top-10 sm:top-16 left-6 sm:left-12 w-14 h-14 sm:w-20 sm:h-20">
-        <div className="relative w-full h-full flex items-center justify-center">
+      {/* Starburst Icon - hidden on mobile, bouncing on larger screens */}
+      <div
+        className="
+          hidden sm:block absolute top-10 md:top-16 left-12 
+          w-14 h-14 sm:w-20 sm:h-20 animate-bounceStarburst
+        "
+      >
+        <div className="relative w-full h-full flex items-start justify-center">
           {[...Array(16)].map((_, i) => (
             <div
               key={i}
@@ -31,6 +37,7 @@ const HeroSection = () => {
         className="
           text-black text-center text-3xl sm:text-4xl md:text-6xl
           font-bold leading-tight mb-10 sm:mb-16 max-w-5xl mx-auto
+          pt-8 sm:pt-0
         "
       >
         Empowering Brands <br className="hidden sm:block" /> Through Creative
@@ -48,7 +55,7 @@ const HeroSection = () => {
           <p className="text-gray-900 text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
             From web development to branding, we deliver innovative strategies
             that elevate your brand and drive growth. Let's create something
-            exceptional together
+            exceptional together.
           </p>
           <button
             className="
@@ -61,58 +68,34 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* Center: Large circular background with image */}
-        <div className="relative flex justify-center mt-8 md:mt-0">
+        {/* Center: Only floating blurred tab with buttons */}
+        <div className="relative flex justify-center md:mt-0">
           <div
             className="
-              relative w-60 h-60 sm:w-72 sm:h-72 md:w-96 md:h-96
-              rounded-full bg-gradient-to-b from-gray-200 to-gray-400
-              flex items-center justify-center overflow-visible shadow-2xl
+              backdrop-blur-md bg-gray-400/70 border border-white/30
+              rounded-full px-3 py-3 sm:px-4 sm:py-4 flex gap-3 sm:gap-4 shadow-lg
+              animate-float
             "
+            style={{
+              animation: "float 3s ease-in-out infinite",
+            }}
           >
-            {/* Dark circular overlay */}
-            <div
+            <button
               className="
-                absolute bottom-0 w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80
-                rounded-full bg-gray-900 shadow-2xl
+                px-4 sm:px-6 py-2 rounded-full bg-[#7CFF3B] text-black
+                font-semibold hover:bg-[#6EE032] transition text-sm sm:text-base
               "
-            ></div>
-
-            {/* Main image */}
-            <div className="relative w-full h-full rounded-full flex items-center justify-center z-10">
-              <img
-                className="w-full h-full object-cover rounded-full"
-                src="/assets/WomenHero.png"
-                alt="Hero"
-              />
-            </div>
-
-            {/* Blurred tab with buttons */}
-            <div className="absolute -bottom-6 flex justify-center w-full z-10 px-2">
-              <div
-                className="
-                  backdrop-blur-md bg-gray-400/70 border border-white/30
-                  rounded-full px-2 sm:px-3 py-2 sm:py-3 flex gap-2 sm:gap-3 shadow-lg
-                "
-              >
-                <button
-                  className="
-                    px-4 sm:px-6 py-2 rounded-full bg-[#7CFF3B] text-black
-                    font-semibold hover:bg-[#6EE032] transition text-sm sm:text-base
-                  "
-                >
-                  Start Your Project
-                </button>
-                <button
-                  className="
-                    px-4 sm:px-6 py-2 border border-white/50 text-white
-                    rounded-full hover:bg-white/10 transition font-medium text-sm sm:text-base
-                  "
-                >
-                  Let's Collaborate
-                </button>
-              </div>
-            </div>
+            >
+              Start Your Project
+            </button>
+            <button
+              className="
+                px-4 sm:px-6 py-2 border border-white/50 text-white
+                rounded-full hover:bg-white/10 transition font-medium text-sm sm:text-base
+              "
+            >
+              Let's Collaborate
+            </button>
           </div>
         </div>
 
@@ -126,13 +109,49 @@ const HeroSection = () => {
             ))}
           </div>
           <div className="text-center md:text-right">
-            <p className="text-2xl sm:text-3xl font-bold text-black">10 Years</p>
-            <p className="text-gray-900 text-sm sm:text-base font-medium">
+            <p className="text-2xl sm:text-3xl font-bold text-black leading-tight">
+              10 Years
+            </p>
+            <p className="text-gray-900 text-sm sm:text-base font-medium leading-tight">
               Experience
             </p>
           </div>
         </div>
       </div>
+
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+        }
+
+        @keyframes bounceStarburst {
+          0% {
+            transform: translateY(0) scale(1);
+          }
+          20% {
+            transform: translateY(-20px) scale(1.05);
+          }
+          40% {
+            transform: translateY(0) scale(0.95);
+          }
+          60% {
+            transform: translateY(-10px) scale(1.02);
+          }
+          80%, 100% {
+            transform: translateY(0) scale(1);
+          }
+        }
+
+        .animate-bounceStarburst {
+          animation: bounceStarburst 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };

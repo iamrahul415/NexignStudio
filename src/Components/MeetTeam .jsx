@@ -55,7 +55,7 @@ const MeetTeam = () => {
             </span>
           </h2>
 
-          <div className="bg-white rounded-full px-4 py-2 sm:px-6 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-lg self-center md:self-auto">
+          <div className="bg-white rounded-full px-4 py-2 sm:px-6 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-lg self-center md:self-auto cursor-pointer transition-all duration-300 hover:scale-105">
             <span className="text-black text-sm sm:text-base font-medium">
               Join Our Team
             </span>
@@ -68,7 +68,7 @@ const MeetTeam = () => {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="bg-white text-black rounded-xl p-5 sm:p-6 shadow-md flex flex-col"
+              className="bg-white text-black rounded-xl p-5 sm:p-6 shadow-md flex flex-col transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {/* Top section */}
               <div className="flex items-start gap-4 mb-4">
