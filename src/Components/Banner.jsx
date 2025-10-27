@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NavigationBanner() {
   return (
-    <div className="w-full bg-black p-4 sm:p-6 overflow-hidden">
+    <div className="w-full bg-[#023530] p-4 sm:p-6 overflow-hidden">
       <div className=" rounded-3xl shadow-xl px-4 sm:px-8 py-6 sm:py-8">
         <div
           className="

@@ -43,9 +43,9 @@ const MeetTeam = () => {
   return (
     <section
       id="projects"
-      className="bg-black min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-12"
+      className="bg-[#023530] min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-12"
     >
-      <div className="relative bg-gray-900/70 backdrop-blur-lg rounded-2xl md:rounded-[2rem] shadow-2xl w-full max-w-[95%] md:max-w-[90%] p-6 sm:p-8 md:p-12">
+      <div className="relative bg-[#0d5a52] backdrop-blur-lg rounded-2xl md:rounded-[2rem] shadow-2xl w-full max-w-[95%] md:max-w-[90%] p-6 sm:p-8 md:p-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 md:mb-10 gap-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center md:text-left">
@@ -68,7 +68,7 @@ const MeetTeam = () => {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="bg-white text-black rounded-xl p-5 sm:p-6 shadow-md flex flex-col transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-[#0d5a52] text-black rounded-xl p-5 sm:p-6 shadow-md flex flex-col transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {/* Top section */}
               <div className="flex items-start gap-4 mb-4">

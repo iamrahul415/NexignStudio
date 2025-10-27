@@ -13,7 +13,7 @@ export default function OurServices() {
   return (
     <section
       id="services"
-      className="relative min-h-screen bg-black flex items-center justify-center px-6 md:px-16 py-12 md:py-20"
+      className="relative min-h-screen bg-[#023530] flex items-center justify-center px-6 md:px-16 py-12 md:py-20"
     >
       {/* Card Container */}
       <div className="relative bg-gray-900/70 backdrop-blur-lg rounded-[2rem] shadow-2xl max-w-[90%] w-full grid md:grid-cols-3 gap-8 p-12">

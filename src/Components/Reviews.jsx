@@ -68,7 +68,7 @@ const Reviews = () => {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="flex justify-center px-4 sm:px-6 py-12 sm:py-16 bg-black relative">
+    <section ref={sectionRef} className="flex justify-center px-4 sm:px-6 py-12 sm:py-16 bg-[#023530] relative">
       <div
         className="
           backdrop-blur-md bg-white/30 rounded-[40px] shadow-xl

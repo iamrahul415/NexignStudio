@@ -67,7 +67,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="reviews" className="bg-black text-white py-10 sm:py-12 relative">
+    <section id="reviews" className="bg-[#023530] text-white py-10 sm:py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Scrollable cards */}
         <div
@@ -82,7 +82,7 @@ const Testimonials = () => {
             <div
               key={idx}
               className="
-                flex-shrink-0 bg-neutral-900 rounded-xl p-5 sm:p-6 shadow-md
+                flex-shrink-0 bg-[#0d5a52] rounded-xl p-5 sm:p-6 shadow-md
                 w-[85%] sm:w-[22rem] md:w-[28rem] lg:w-[35rem]
                 h-auto sm:h-64
               "
@@ -109,13 +109,13 @@ const Testimonials = () => {
         <div className="flex justify-center mt-6 sm:mt-8 space-x-4">
           <button
             onClick={() => scrollBy("left")}
-            className="bg-neutral-800 hover:bg-neutral-700 p-2 sm:p-3 rounded-full"
+            className="bg-[#0d5a52] hover:bg-neutral-700 p-2 sm:p-3 rounded-full"
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
           <button
             onClick={() => scrollBy("right")}
-            className="bg-neutral-800 hover:bg-neutral-700 p-2 sm:p-3 rounded-full"
+            className="bg-[#0d5a52] hover:bg-neutral-700 p-2 sm:p-3 rounded-full"
           >
             <ChevronRight className="w-5 h-5 text-white" />
           </button>

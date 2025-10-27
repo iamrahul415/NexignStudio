@@ -53,7 +53,7 @@ export default function Body() {
     <section
       id="about"
       className="
-        bg-black text-white min-h-screen flex flex-col justify-center
+        bg-[#023530] text-white min-h-screen flex flex-col justify-center
         px-4 sm:px-6 md:px-16 py-10 md:py-0
       "
     >

@@ -4,7 +4,7 @@ const InnovateInspireCreate = () => {
   return (
     <section
       className="
-        bg-black text-white flex flex-col items-center
+        bg-[#023530] text-white flex flex-col items-center
         py-6 sm:py-8
       "
     >

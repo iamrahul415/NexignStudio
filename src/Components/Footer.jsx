@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="w-full">
       {/* Contact Section */}
-      <div className="bg-black text-white py-12 px-4 sm:px-8">
+      <div className="bg-[#023530] text-white py-12 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:justify-between gap-8">
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -15,7 +15,7 @@ const Footer = () => {
               we can help you achieve your goals with our innovative solutions.
             </p>
             <button
-              className="bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-colors duration-300"
+              className="bg-[#0d5a52] hover:bg-green-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-colors duration-300"
               onClick={() =>
                 window.open("https://wa.me/919102246263", "_blank")
               }
@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Company Details */}
           <div className="flex-1 flex justify-center md:justify-end">
-            <div className="bg-gray-900 p-6 rounded-lg max-w-sm">
+            <div className="bg-[#0d5a52] p-6 rounded-lg max-w-sm">
               <h3 className="text-2xl font-bold mb-4 text-green-500">
                 Nexign Studio
               </h3>
@@ -61,9 +61,9 @@ const Footer = () => {
       </div>
 
       {/* Green Footer */}
-      <div className="bg-black px-4 sm:px-8">
+      <div className="bg-[#023530] px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-green-500 text-white rounded-2xl p-8 sm:p-12">
+          <div className="bg-[#0d5a52] text-white rounded-2xl p-8 sm:p-12">
             {/* Top Section - Logo and Description */}
             <div className="flex flex-col md:flex-row justify-between items-start mb-10 text-center md:text-left">
               <div className="mb-4 md:mb-0 w-full md:w-auto">
@@ -155,7 +155,7 @@ const Footer = () => {
                     placeholder="Enter your email"
                     className="flex-1 px-3 py-2 rounded-md text-black text-sm outline-none"
                   />
-                  <button className="bg-black hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition-colors">
+                  <button className="bg-[#023530] hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition-colors">
                     Subscribe
                   </button>
                 </div>
