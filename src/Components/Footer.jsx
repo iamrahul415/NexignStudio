@@ -173,7 +173,7 @@ const Footer = () => {
                 {/* Facebook */}
                 <a
                   href="#"
-                  className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-300 transition-colors"
+                  className="w-8 h-8 bg-[#0d6358] rounded-full flex items-center justify-center hover:bg-[#073b2e] transition-colors"
                 >
                   <svg
                     className="w-4 h-4"
@@ -187,7 +187,7 @@ const Footer = () => {
                 {/* Twitter */}
                 <a
                   href="#"
-                  className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-300 transition-colors"
+                  className="w-8 h-8 bg-[#0d6358] rounded-full flex items-center justify-center hover:bg-[#073b2e] transition-colors"
                 >
                   <svg
                     className="w-4 h-4"
@@ -201,7 +201,7 @@ const Footer = () => {
                 {/* LinkedIn */}
                 <a
                   href="#"
-                  className="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center hover:bg-green-300 transition-colors"
+                  className="w-8 h-8 bg-[#0d6358] rounded-full flex items-center justify-center hover:bg-[#073b2e] transition-colors"
                 >
                   <svg
                     className="w-4 h-4"

@@ -110,7 +110,7 @@ export default function Body() {
             <div
               className="
                 absolute bottom-3 sm:bottom-4 left-3 sm:left-4
-                bg-lime-400 text-black px-3 sm:px-4 py-1.5 sm:py-2
+                bg-[#0d6358] text-black px-3 sm:px-4 py-1.5 sm:py-2
                 rounded-md font-medium text-xs sm:text-sm
               "
             >
@@ -119,7 +119,7 @@ export default function Body() {
             <div
               className="
                 absolute top-2 sm:top-4 -left-3 sm:-left-4
-                text-lime-400 text-3xl sm:text-4xl
+                text-[#0d6358] text-3xl sm:text-4xl
               "
             >
               ✦

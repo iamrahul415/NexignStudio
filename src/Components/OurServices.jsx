@@ -23,7 +23,7 @@ export default function OurServices() {
             transform: translateX(0);
           }
         }
-        
+
         @keyframes fadeInRight {
           from {
             opacity: 0;
@@ -34,7 +34,7 @@ export default function OurServices() {
             transform: translateX(0);
           }
         }
-        
+
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -45,28 +45,29 @@ export default function OurServices() {
             transform: translateY(0);
           }
         }
-        
+
         @keyframes pulse {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 1;
           }
           50% {
             opacity: 0.5;
           }
         }
-        
+
         .animate-fade-in-left {
           animation: fadeInLeft 0.8s ease-out;
         }
-        
+
         .animate-fade-in-right {
           animation: fadeInRight 0.8s ease-out;
         }
-        
+
         .animate-fade-in-up {
           animation: fadeInUp 0.8s ease-out;
         }
-        
+
         .animate-pulse-slow {
           animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
@@ -97,7 +98,7 @@ export default function OurServices() {
               rotate-[-90deg] z-10
             "
           >
-            <span className="bg-lime-400 text-black font-semibold px-3 py-1 text-sm tracking-wide">
+            <span className="bg-[#073a2d] text-black font-semibold px-3 py-1 text-sm tracking-wide">
               WHAT WE DO
             </span>
           </div>
@@ -115,7 +116,7 @@ export default function OurServices() {
                 Services
               </span>
             </h2>
-            <p className="text-gray-300 max-w-md text-sm sm:text-base">
+            <p className="text-white max-w-md text-sm sm:text-base">
               We offer a range of creative and digital services designed to help
               your brand stand out.
             </p>
@@ -127,20 +128,20 @@ export default function OurServices() {
                   key={i}
                   style={{ animationDelay: `${i * 0.1}s` }}
                   className={`
-                    flex justify-between items-center text-white px-4 sm:px-6 py-3 sm:py-4
+                    flex justify-between items-center text-black px-4 sm:px-6 py-3 sm:py-4
                     rounded-full border text-left transition-all duration-300
                     transform hover:scale-105 hover:shadow-lg animate-fade-in-left
                     ${
                       i === 0
-                        ? "bg-transparent text-lime-400 hover:bg-black/50 border-gray-600 hover:border-lime-400"
-                        : "bg-transparent border-gray-600 hover:bg-black/50 hover:border-lime-400 hover:text-lime-400"
+                        ? "bg-transparent hover:text-white hover:bg-black/50 border-gray-600 hover:border-[#0d6358]"
+                        : "bg-transparent hover:text-white hover:bg-black/50 border-gray-600 hover:border-[#0d6358]"
                     }
                   `}
                 >
                   <span className="font-medium text-sm sm:text-base">
                     {service.id} {service.title}
                   </span>
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-lime-400 rounded-full transition-transform duration-300 hover:-rotate-45 hover:scale-110">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-[#0d6358] rounded-full transition-transform duration-300 hover:-rotate-45 hover:scale-110">
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
                   </div>
                 </button>
@@ -167,8 +168,8 @@ export default function OurServices() {
           {/* Right Column: Cards */}
           <div className="lg:col-span-3 flex flex-col justify-center gap-5 animate-fade-in-right">
             {/* Card 1 */}
-            <div 
-              className="bg-gray-800/60 backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between
+            <div
+              className="bg-[#0d5a52] backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between
               border border-gray-700/50 hover:border-lime-400/50 transition-all duration-300
               hover:shadow-xl hover:shadow-lime-400/10 hover:-translate-y-1 group cursor-pointer"
             >
@@ -177,14 +178,14 @@ export default function OurServices() {
               </p>
 
               <div className="flex items-center gap-3">
-                <span className="font-bold text-white text-sm sm:text-base group-hover:text-lime-400 transition-colors duration-300">
+                <span className="font-bold text-white text-sm sm:text-base group-hover:text-lime-400">
                   See how we works
                 </span>
                 <div
                   className="
                     w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center
                     bg-white rounded-full transition-all duration-300
-                    group-hover:bg-lime-400 group-hover:scale-110
+                    group-hover:bg-[#073a2d] group-hover:scale-110
                   "
                 >
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-black transition-transform duration-300 group-hover:-rotate-45" />
@@ -193,27 +194,27 @@ export default function OurServices() {
             </div>
 
             {/* Card 2 */}
-            <div 
-              className="bg-[#073b2e] backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between text-black
-              hover:bg-lime-400 transition-all duration-300 hover:shadow-xl hover:shadow-lime-400/30
-              hover:-translate-y-1 group cursor-pointer"
+            <div
+              className="bg-[#0d5a52] backdrop-blur-md rounded-2xl p-5 sm:p-6 flex flex-col justify-between
+              border border-gray-700/50 hover:border-lime-400/50 transition-all duration-300
+              hover:shadow-xl hover:shadow-lime-400/10 hover:-translate-y-1 group cursor-pointer"
             >
               <p className="text-sm sm:text-base font-medium mb-4 leading-relaxed">
                 Looking for design experts who can bring your vision to life?
               </p>
 
               <div className="flex items-center gap-3">
-                <span className="font-bold text-sm sm:text-base">
+                <span className="font-bold text-sm sm:text-base group-hover:text-lime-400">
                   Meet our Expert
                 </span>
                 <div
                   className="
                     w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center
                     bg-white rounded-full transition-all duration-300
-                    group-hover:bg-black group-hover:scale-110
+                    group-hover:bg-[#073a2d] group-hover:scale-110
                   "
                 >
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300 group-hover:-rotate-45 group-hover:text-white" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-black transition-transform duration-300 group-hover:-rotate-45" />
                 </div>
               </div>
             </div>

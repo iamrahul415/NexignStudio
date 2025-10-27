@@ -50,13 +50,13 @@ const MeetTeam = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 md:mb-10 gap-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center md:text-left">
             Meet
-            <span className="bg-lime-400 text-white px-2 rounded-md ml-2 inline-block transform -skew-x-12">
+            <span className="bg-[#073b2e] text-white px-2 rounded-md ml-2 inline-block transform -skew-x-12">
               Our Team
             </span>
           </h2>
 
-          <div className="bg-white rounded-full px-4 py-2 sm:px-6 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-lg self-center md:self-auto cursor-pointer transition-all duration-300 hover:scale-105">
-            <span className="text-black text-sm sm:text-base font-medium">
+          <div className="bg-[#073b2e] rounded-full px-4 py-2 sm:px-6 sm:py-3 flex items-center gap-2 sm:gap-3 shadow-lg self-center md:self-auto cursor-pointer transition-all duration-300 hover:scale-105">
+            <span className="text-white text-sm sm:text-base font-medium">
               Join Our Team
             </span>
             <div className="w-4 h-4 sm:w-6 sm:h-6 bg-lime-400 rounded-full"></div>
@@ -79,7 +79,7 @@ const MeetTeam = () => {
                     height="70"
                     viewBox="0 0 80 80"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-lime-400"
+                    className="text-[#073a2d]"
                   >
                     <g fill="currentColor" transform="rotate(45 40 40)">
                       <circle cx="40" cy="20" r="20" />
@@ -102,13 +102,13 @@ const MeetTeam = () => {
                   <h3 className="text-lg sm:text-xl font-bold mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gray-500 text-xs sm:text-sm">
+                  <p className="text-white text-xs sm:text-sm">
                     {member.role}
                   </p>
                 </div>
 
                 {/* Menu dots */}
-                <div className="text-gray-400 flex-shrink-0">
+                <div className="text-white flex-shrink-0">
                   <svg
                     width="18"
                     height="18"
@@ -123,7 +123,7 @@ const MeetTeam = () => {
               </div>
 
               <hr className="border-gray-300 w-full mb-4" />
-              <p className="text-gray-900 text-sm sm:text-base leading-relaxed">
+              <p className="text-white text-sm sm:text-base leading-relaxed">
                 {member.desc}
               </p>
             </div>
