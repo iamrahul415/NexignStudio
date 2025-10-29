@@ -6,13 +6,7 @@ const Navbar = () => {
 
   // Prevent background scroll when sidebar is open
   useEffect(() => {
-    if (isSidebarOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    // Cleanup on unmount
+    document.body.style.overflow = isSidebarOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -21,20 +15,18 @@ const Navbar = () => {
   return (
     <>
       <header className="w-full flex justify-center mt-6 bg-white">
-        <div className="bg-[#073a2d] grid grid-cols-3 items-center text-white rounded-full px-8 py-4 w-[90%] max-w-[75rem] md:grid-cols-3 relative">
+        <div className="bg-[#073a2d] flex items-center justify-between text-white rounded-full px-6 py-4 w-[90%] max-w-[75rem] relative">
           {/* Mobile: Menu Button (Left) */}
-          <div className="md:hidden flex justify-start">
-            <button
-              onClick={() => setIsSidebarOpen(true)}
-              className="text-white hover:text-green-400 transition-colors"
-              aria-label="Open menu"
-            >
-              <Menu size={24} />
-            </button>
-          </div>
+          <button
+            onClick={() => setIsSidebarOpen(true)}
+            className="md:hidden text-white hover:text-green-400 transition-colors"
+            aria-label="Open menu"
+          >
+            <Menu size={24} />
+          </button>
 
           {/* Desktop: Left Links */}
-          <nav className="hidden md:flex justify-center space-x-10 text-sm font-medium">
+          <nav className="hidden md:flex justify-center space-x-20 text-sm font-medium">
             <a href="#about" className="hover:text-green-400 transition-colors">
               About Us
             </a>
@@ -47,16 +39,16 @@ const Navbar = () => {
           </nav>
 
           {/* ✅ Center Logo (Mobile: Right Side) */}
-          <div className="flex items-center justify-center col-span-2 md:col-span-1">
+          <div className="flex items-center justify-center md:justify-center md:flex-1">
             <img
               src="/assets/Logo.webp"
               alt="Logo"
-              className="h-10 w-auto md:h-12 object-contain"
+              className="h-10 w-auto md:h-12 object-contain md:mx-auto ml-auto"
             />
           </div>
 
           {/* Desktop: Right Links */}
-          <nav className="hidden md:flex justify-center space-x-10 text-sm font-medium">
+          <nav className="hidden md:flex justify-center space-x-20 text-sm font-medium">
             <a
               href="#projects"
               className="hover:text-green-400 transition-colors"
@@ -87,7 +79,7 @@ const Navbar = () => {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="p-6">
+        <div className="p-6 relative">
           {/* Close Button */}
           <button
             onClick={() => setIsSidebarOpen(false)}
@@ -97,8 +89,8 @@ const Navbar = () => {
             <X size={24} />
           </button>
 
-          {/* Logo in Sidebar */}
-          <div className="flex items-center justify-center mb-10">
+          {/* ✅ Logo shifted to left when sidebar opens */}
+          <div className="flex items-center justify-start mb-10">
             <img
               src="/assets/Logo.webp"
               alt="Logo"

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -32,22 +31,39 @@ const testimonials = [
     image: "./assets/men1.jpg",
     text: "From start to finish, working with Creatix was seamless. The results exceeded our expectations and impressed our entire team.",
   },
+  {
+    name: "Olivia Brown",
+    role: "Design Director, Artify",
+    image: "./assets/men2.jpg",
+    text: "Creatix brought our brand to life with their unique creative flair. The designs captured our essence perfectly.",
+  },
+  {
+    name: "Liam Carter",
+    role: "CTO, InnovateHub",
+    image: "./assets/men1.jpg",
+    text: "Their understanding of modern design and user experience helped us elevate our digital product beyond expectations.",
+  },
+  {
+    name: "Emily Stone",
+    role: "Operations Head, BlueWave",
+    image: "./assets/men2.jpg",
+    text: "Creatix combines professionalism with creativity like no one else. Every project feels fresh and impactful.",
+  },
 ];
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
 
-  // Auto horizontal scroll
+  // Continuous infinite scroll
   useEffect(() => {
     const container = scrollRef.current;
     let req;
-    const speed = 1; // px per frame, adjust speed here
+    const speed = 0.8; // Adjust scroll speed here
 
     const loop = () => {
       if (container) {
         container.scrollLeft += speed;
-        // Loop back to start
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        if (container.scrollLeft >= container.scrollWidth / 2) {
           container.scrollLeft = 0;
         }
         req = requestAnimationFrame(loop);
@@ -58,14 +74,6 @@ const Testimonials = () => {
     return () => cancelAnimationFrame(req);
   }, []);
 
-  const scrollBy = (dir) => {
-    const width = scrollRef.current.clientWidth;
-    scrollRef.current.scrollBy({
-      left: dir === "left" ? -width : width,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section id="reviews" className="bg-[#023530] text-white py-10 sm:py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -73,52 +81,38 @@ const Testimonials = () => {
         <div
           ref={scrollRef}
           className="
-            flex space-x-4 sm:space-x-6 overflow-x-auto scroll-smooth
+            flex space-x-4 sm:space-x-6 overflow-x-hidden
             [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
           "
         >
-          {/* Duplicate the array for infinite scroll effect */}
+          {/* Duplicate testimonials for seamless loop */}
           {testimonials.concat(testimonials).map((t, idx) => (
             <div
               key={idx}
               className="
-                flex-shrink-0 bg-[#0d5a52] rounded-xl p-5 sm:p-6 shadow-md
-                w-[85%] sm:w-[22rem] md:w-[28rem] lg:w-[35rem]
-                h-auto sm:h-64
+                flex-shrink-0 bg-[#0d5a52] rounded-2xl p-5 sm:p-6 shadow-lg
+                w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem]
+                flex flex-col justify-between
               "
             >
-              <div className="flex items-center mb-4">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h3 className="font-semibold text-base sm:text-lg">{t.name}</h3>
-                  <p className="text-gray-400 text-xs sm:text-sm">{t.role}</p>
+              <div>
+                <div className="flex items-center mb-4">
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover mr-4"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-base sm:text-lg">{t.name}</h3>
+                    <p className="text-gray-400 text-xs sm:text-sm">{t.role}</p>
+                  </div>
                 </div>
+                <p className="text-gray-200 text-sm sm:text-base leading-relaxed line-clamp-5">
+                  {t.text}
+                </p>
               </div>
-              <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
-                {t.text}
-              </p>
             </div>
           ))}
-        </div>
-
-        {/* Prev / Next buttons */}
-        <div className="flex justify-center mt-6 sm:mt-8 space-x-4">
-          <button
-            onClick={() => scrollBy("left")}
-            className="bg-[#0d5a52] hover:bg-neutral-700 p-2 sm:p-3 rounded-full"
-          >
-            <ChevronLeft className="w-5 h-5 text-white" />
-          </button>
-          <button
-            onClick={() => scrollBy("right")}
-            className="bg-[#0d5a52] hover:bg-neutral-700 p-2 sm:p-3 rounded-full"
-          >
-            <ChevronRight className="w-5 h-5 text-white" />
-          </button>
         </div>
       </div>
     </section>
