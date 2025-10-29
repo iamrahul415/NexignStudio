@@ -98,7 +98,7 @@ export default function OurServices() {
               rotate-[-90deg] z-10
             "
           >
-            <span className="bg-[#073a2d] text-black font-semibold px-3 py-1 text-sm tracking-wide">
+            <span className="bg-[#073a2d] text-white font-semibold px-2.5 py-1 text-sm tracking-wide">
               WHAT WE DO
             </span>
           </div>

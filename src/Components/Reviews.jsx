@@ -71,7 +71,7 @@ const Reviews = () => {
     <section ref={sectionRef} className="flex justify-center px-4 sm:px-6 py-12 sm:py-16 bg-[#023530] relative">
       <div
         className="
-          backdrop-blur-md bg-white/30 rounded-[40px] shadow-xl
+          backdrop-blur-md bg-[#0d6358] rounded-[40px] shadow-xl
           flex flex-row justify-around items-center
           gap-4 sm:gap-6 md:gap-16
           px-4 sm:px-8 md:px-6 py-6 sm:py-8 max-w-[95%] sm:max-w-[90%] w-full relative overflow-hidden
@@ -83,7 +83,7 @@ const Reviews = () => {
         {/* Stat 1 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
           <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.companies}<span className="text-green-300">+</span>
+            {counts.companies}<span className="text-[#023530]">+</span>
           </p>
           <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
             Companies
@@ -93,7 +93,7 @@ const Reviews = () => {
         {/* Stat 2 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
           <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.years}<span className="text-green-300">+</span>
+            {counts.years}<span className="text-[#023530]">+</span>
           </p>
           <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
             Years Exp.
@@ -103,7 +103,7 @@ const Reviews = () => {
         {/* Stat 3 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
           <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.hours}<span className="text-green-300">+</span>
+            {counts.hours}<span className="text-[#023530]">+</span>
           </p>
           <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
             Hours of Digital
@@ -113,10 +113,10 @@ const Reviews = () => {
         {/* Stat 4 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
           <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.revenue}M<span className="text-green-300">+</span>
+            {counts.revenue}M<span className="text-[#023530]">+</span>
           </p>
           <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
-            In Tracked Revenue
+          Tracked Revenue
           </p>
         </div>
       </div>

@@ -50,7 +50,7 @@ const MeetTeam = () => {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 md:mb-10 gap-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center md:text-left">
             Meet
-            <span className="bg-[#073b2e] text-white px-2 rounded-md ml-2 inline-block transform -skew-x-12">
+            <span className="bg-[#073b2e] text-white px-2 rounded-md ml-2 inline-block transform -skew-x-12 hover:skew-x-0 transition-transform duration-300">
               Our Team
             </span>
           </h2>
