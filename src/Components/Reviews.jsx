@@ -39,10 +39,10 @@ const Reviews = () => {
     const interval = duration / steps;
 
     const targets = {
-      companies: 2000,
-      years: 10,
-      hours: 800,
-      revenue: 150
+      companies: 50,
+      years: 4,
+      hours: 1500,
+      revenue: 8
     };
 
     let currentStep = 0;
@@ -71,7 +71,7 @@ const Reviews = () => {
     <section ref={sectionRef} className="flex justify-center px-4 sm:px-6 py-12 sm:py-16 bg-[#023530] relative">
       <div
         className="
-          backdrop-blur-md bg-[#0d6358] rounded-[40px] shadow-xl
+          backdrop-blur-md bg-white rounded-[40px] shadow-xl
           flex flex-row justify-around items-center
           gap-4 sm:gap-6 md:gap-16
           px-4 sm:px-8 md:px-6 py-6 sm:py-8 max-w-[95%] sm:max-w-[90%] w-full relative overflow-hidden
@@ -82,41 +82,41 @@ const Reviews = () => {
 
         {/* Stat 1 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.companies}<span className="text-[#023530]">+</span>
+          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+            {counts.companies}<span className="text-[#073b2e]">+</span>
           </p>
-          <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
+          <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
             Companies
           </p>
         </div>
 
         {/* Stat 2 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
+          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
             {counts.years}<span className="text-[#023530]">+</span>
           </p>
-          <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
+          <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
             Years Exp.
           </p>
         </div>
 
         {/* Stat 3 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.hours}<span className="text-[#023530]">+</span>
+          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+            {counts.hours}<span className="text-[#073b2e]">+</span>
           </p>
-          <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
-            Hours of Digital
+          <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
+            Design asset delivered
           </p>
         </div>
 
         {/* Stat 4 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-bold text-white">
-            {counts.revenue}M<span className="text-[#023530]">+</span>
+          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+            {counts.revenue}<span className="text-[#073b2e]">+</span>
           </p>
-          <p className="text-gray-300 text-[10px] sm:text-sm md:text-base mt-1">
-          Tracked Revenue
+          <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
+            Multinational company worked with
           </p>
         </div>
       </div>

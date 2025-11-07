@@ -19,7 +19,7 @@ function App() {
       <Body/>
       <OurServices/>
       <InnovateInspireCreate/>
-      <MeetTeam/>
+      {/* <MeetTeam/> */}
       <Testimonials/>
       <Banner/>
       <Footer/>

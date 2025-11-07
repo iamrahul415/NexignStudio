@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -54,11 +55,10 @@ const testimonials = [
 const Testimonials = () => {
   const scrollRef = useRef(null);
 
-  // Continuous infinite scroll
   useEffect(() => {
     const container = scrollRef.current;
     let req;
-    const speed = 0.8; // Adjust scroll speed here
+    const speed = 0.6;
 
     const loop = () => {
       if (container) {
@@ -75,9 +75,14 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="reviews" className="bg-[#023530] text-white py-10 sm:py-12 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Scrollable cards */}
+    <section id="reviews" className="bg-[#012A26] text-white py-16 sm:py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#024d45] via-transparent to-[#012A26] opacity-40 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <h2 className="text-2xl sm:text-4xl font-semibold text-center mb-10 font-outfit">
+          What Our Clients Say
+        </h2>
+
         <div
           ref={scrollRef}
           className="
@@ -85,32 +90,35 @@ const Testimonials = () => {
             [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
           "
         >
-          {/* Duplicate testimonials for seamless loop */}
           {testimonials.concat(testimonials).map((t, idx) => (
             <div
               key={idx}
               className="
-                flex-shrink-0 bg-[#0d5a52] rounded-2xl p-5 sm:p-6 shadow-lg
-                w-[18rem] h-[18rem] sm:w-[20rem] sm:h-[20rem]
-                flex flex-col justify-between
+                flex-shrink-0 w-[14rem] sm:w-[18rem] md:w-[21rem]
+                bg-gradient-to-br from-[#0b4d44] to-[#06695e]
+                rounded-3xl p-4 sm:p-6 md:p-8
+                shadow-[0_0_20px_rgba(0,0,0,0.3)]
+                transition-all duration-500 ease-in-out transform
+                hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(0,255,200,0.3)]
               "
             >
-              <div>
-                <div className="flex items-center mb-4">
-                  <img
-                    src={t.image}
-                    alt={t.name}
-                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h3 className="font-semibold text-base sm:text-lg">{t.name}</h3>
-                    <p className="text-gray-400 text-xs sm:text-sm">{t.role}</p>
-                  </div>
+              <div className="flex items-center mb-4 sm:mb-5">
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border-2 border-teal-400 object-cover shadow-md mr-3 sm:mr-4"
+                />
+                <div>
+                  <h3 className="font-semibold text-sm sm:text-base md:text-lg">{t.name}</h3>
+                  <p className="text-teal-300 text-xs sm:text-sm">{t.role}</p>
                 </div>
-                <p className="text-gray-200 text-sm sm:text-base leading-relaxed line-clamp-5">
-                  {t.text}
-                </p>
               </div>
+
+              <Quote className="text-teal-400 opacity-70 mb-2 sm:mb-3" size={20} />
+
+              <p className="text-gray-100 text-xs sm:text-sm md:text-base leading-relaxed">
+                {t.text}
+              </p>
             </div>
           ))}
         </div>

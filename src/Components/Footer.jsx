@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="bg-[#023530] text-white py-12 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:justify-between gap-8">
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-outfit mb-4">
               Get in Touch Today!
             </h2>
             <p className="text-gray-300 text-base sm:text-lg mb-6 max-w-md mx-auto md:mx-0">
@@ -15,7 +15,7 @@ const Footer = () => {
               we can help you achieve your goals with our innovative solutions.
             </p>
             <button
-              className="bg-[#0d5a52] hover:bg-[#073b2e] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-colors duration-300"
+              className="bg-[#0d5a52] hover:bg-[#073b2e] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-outfit transition-colors duration-300"
               onClick={() =>
                 window.open("https://wa.me/919102246263", "_blank")
               }
@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Company Details */}
           <div className="flex-1 flex justify-center md:justify-end">
-            <div className="bg-[#0d5a52] p-6 rounded-lg max-w-sm">
+            <div className="bg-[#007c6a] p-6 rounded-lg max-w-sm">
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-start gap-3">
                   <svg
@@ -74,18 +74,18 @@ const Footer = () => {
       {/* Green Footer */}
       <div className="bg-[#023530] px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-[#0d5a52] text-white rounded-2xl p-8 sm:p-12">
+          <div className="bg-white text-[#023530] rounded-2xl p-8 sm:p-12">
             {/* Top Section - Logo and Description */}
             <div className="flex flex-col md:flex-row justify-between items-start mb-10 text-center md:text-left">
               <div className="mb-4 md:mb-0 w-full md:w-auto">
                 <img
-                  src="/assets/Logo1.webp"
+                  src="/assets/Logo1.jpg"
                   alt="Logo1"
                   className="h-10 object-contain mx-auto md:mx-0"
                 />
               </div>
               <div className="max-w-sm w-full md:w-auto mx-auto md:mx-0">
-                <p className="text-green-100 text-sm leading-relaxed">
+                <p className="text-[#023530] text-sm leading-relaxed">
                   Innovative solutions for modern businesses. We help companies
                   transform their digital presence and achieve sustainable
                   growth.
@@ -96,20 +96,20 @@ const Footer = () => {
             {/* Middle Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-10 text-center md:text-left">
               <div>
-                <h4 className="font-semibold mb-3 text-lg">Services</h4>
-                <ul className="space-y-2 text-green-100 text-sm">
+                <h4 className="font-outfit mb-3 text-lg">Services</h4>
+                <ul className="space-y-2 text-[#023530] text-sm">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Web Design
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Development
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Digital Marketing
                     </a>
                   </li>
@@ -117,20 +117,20 @@ const Footer = () => {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3 text-lg">Company</h4>
-                <ul className="space-y-2 text-green-100 text-sm">
+                <h4 className="font-outfit mb-3 text-lg">Company</h4>
+                <ul className="space-y-2 text-[#023530] text-sm">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Our Team
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Contact
                     </a>
                   </li>
@@ -138,15 +138,15 @@ const Footer = () => {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3 text-lg">Career</h4>
-                <ul className="space-y-2 text-green-100 text-sm">
+                <h4 className="font-outfit mb-3 text-lg">Career</h4>
+                <ul className="space-y-2 text-[#023530] text-sm">
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Portfolio
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a href="#" className="hover:text-[#011815] transition-colors">
                       Contact
                     </a>
                   </li>
@@ -154,15 +154,15 @@ const Footer = () => {
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3 text-lg">Newsletter</h4>
-                <p className="text-green-100 text-sm mb-3">
+                <h4 className="font-outfit mb-3 text-lg">Newsletter</h4>
+                <p className="text-[#023530] text-sm mb-3">
                   Subscribe for updates and insights.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 rounded-md text-black text-sm outline-none"
+                    className="flex-1 px-3 py-2 rounded-md text-[#023530] text-sm outline-none border border-gray-300 focus:border-green-500 transition-colors"
                   />
                   <button className="bg-[#023530] hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm transition-colors">
                     Subscribe

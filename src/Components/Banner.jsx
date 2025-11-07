@@ -15,31 +15,31 @@ export default function NavigationBanner() {
         >
           {/* Banner items */}
           <div className="flex-shrink-0 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 shadow-lg">
-            <span className="text-white text-xl sm:text-3xl font-bold">Design</span>
+            <span className="text-white text-xl sm:text-3xl font-outfit">Design</span>
           </div>
 
           <span className="flex-shrink-0 text-green-400 text-xl sm:text-2xl">✦</span>
 
           <div className="flex-shrink-0 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 shadow-lg">
-            <span className="text-white text-xl sm:text-3xl font-bold">App Design</span>
+            <span className="text-white text-xl sm:text-3xl font-outfit">App Design</span>
           </div>
 
           <span className="flex-shrink-0 text-green-400 text-xl sm:text-2xl">✦</span>
 
           <div className="flex-shrink-0 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 shadow-lg">
-            <span className="text-white text-xl sm:text-3xl font-bold">Dashboard</span>
+            <span className="text-white text-xl sm:text-3xl font-outfit">Dashboard</span>
           </div>
 
           <span className="flex-shrink-0 text-green-400 text-xl sm:text-2xl">✦</span>
 
           <div className="flex-shrink-0 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 shadow-lg">
-            <span className="text-white text-xl sm:text-3xl font-bold">Wireframe</span>
+            <span className="text-white text-xl sm:text-3xl font-outfit">Wireframe</span>
           </div>
 
           <span className="flex-shrink-0 text-green-400 text-xl sm:text-2xl">✦</span>
 
           <div className="flex-shrink-0 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 shadow-lg">
-            <span className="text-white text-xl sm:text-3xl font-bold">User Research</span>
+            <span className="text-white text-xl sm:text-3xl font-outfit">User Research</span>
           </div>
         </div>
       </div>

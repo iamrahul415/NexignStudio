@@ -14,50 +14,56 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full flex justify-center mt-6 bg-white">
-        <div className="bg-[#073a2d] flex items-center justify-between text-white rounded-full px-6 py-4 w-[90%] max-w-[75rem] relative">
-          {/* Mobile: Menu Button (Left) */}
-          <button
-            onClick={() => setIsSidebarOpen(true)}
-            className="md:hidden text-white hover:text-green-400 transition-colors"
-            aria-label="Open menu"
-          >
-            <Menu size={24} />
-          </button>
-
-          {/* Desktop: Left Links */}
-          <nav className="hidden md:flex justify-center space-x-20 text-sm font-medium">
-            <a href="#about" className="hover:text-green-400 transition-colors">
-              About Us
-            </a>
-            <a
-              href="#services"
-              className="hover:text-green-400 transition-colors"
+      <header className="w-full flex justify-center mt-3 bg-white">
+        <div className="flex items-center justify-between bg-white text-[#073a2d] rounded-full px-4 py-3 w-[90%] max-w-[75rem] relative shadow-sm">
+          {/* Left Section - Mobile Menu / Left Nav */}
+          <div className="flex items-center">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="md:hidden text-[#073a2d] hover:text-[#023530] transition-colors"
+              aria-label="Open menu"
             >
-              Services
-            </a>
-          </nav>
+              <Menu size={28} />
+            </button>
 
-          {/* ✅ Center Logo (Mobile: Right Side) */}
-          <div className="flex items-center justify-center md:justify-center md:flex-1">
+            {/* Desktop Left Nav */}
+            <nav className="hidden md:flex items-center space-x-14 text-lg font-outfit">
+              <a
+                href="#about"
+                className="hover:text-[#023530] transition-colors"
+              >
+                About Us
+              </a>
+              <a
+                href="#services"
+                className="hover:text-[#023530] transition-colors"
+              >
+                Services
+              </a>
+            </nav>
+          </div>
+
+          {/* Logo */}
+          <div className="flex items-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 justify-end w-auto md:w-auto">
             <img
-              src="/assets/Logo.webp"
+              src="/assets/Logo1.jpg"
               alt="Logo"
-              className="h-10 w-auto md:h-12 object-contain md:mx-auto ml-auto"
+              className="h-10 w-auto object-contain"
             />
           </div>
 
-          {/* Desktop: Right Links */}
-          <nav className="hidden md:flex justify-center space-x-20 text-sm font-medium">
+          {/* Right Section - Desktop Only */}
+          <nav className="hidden md:flex items-center space-x-14 text-lg font-outfit">
             <a
               href="#projects"
-              className="hover:text-green-400 transition-colors"
+              className="hover:text-[#023530] transition-colors"
             >
               Projects
             </a>
             <a
               href="#reviews"
-              className="hover:text-green-400 transition-colors"
+              className="hover:text-[#023530] transition-colors"
             >
               Reviews
             </a>
@@ -65,17 +71,17 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* Mobile Sidebar Overlay */}
+      {/* Overlay */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-[#023530] bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-[#023530] text-white z-50 transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white text-[#023530] z-50 transform transition-transform duration-300 ease-in-out shadow-lg md:hidden ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -83,51 +89,38 @@ const Navbar = () => {
           {/* Close Button */}
           <button
             onClick={() => setIsSidebarOpen(false)}
-            className="absolute top-6 right-6 text-white hover:text-green-400 transition-colors"
+            className="absolute top-6 right-6 text-[#023530] hover:text-green-400 transition-colors"
             aria-label="Close menu"
           >
-            <X size={24} />
+            <X size={26} />
           </button>
 
-          {/* ✅ Logo shifted to left when sidebar opens */}
+          {/* Logo */}
           <div className="flex items-center justify-start mb-10">
             <img
-              src="/assets/Logo.webp"
+              src="/assets/Logo1.jpg"
               alt="Logo"
-              className="h-10 w-auto object-contain"
+              className="h-8 w-auto object-contain"
             />
           </div>
 
-          {/* Navigation Links */}
-          <nav className="flex flex-col space-y-6">
-            <a
-              href="#about"
-              className="text-lg hover:text-green-400 transition-colors"
-              onClick={() => setIsSidebarOpen(false)}
-            >
-              About Us
-            </a>
-            <a
-              href="#services"
-              className="text-lg hover:text-green-400 transition-colors"
-              onClick={() => setIsSidebarOpen(false)}
-            >
-              Services
-            </a>
-            <a
-              href="#projects"
-              className="text-lg hover:text-green-400 transition-colors"
-              onClick={() => setIsSidebarOpen(false)}
-            >
-              Projects
-            </a>
-            <a
-              href="#reviews"
-              className="text-lg hover:text-green-400 transition-colors"
-              onClick={() => setIsSidebarOpen(false)}
-            >
-              Reviews
-            </a>
+          {/* Sidebar Links */}
+          <nav className="flex flex-col space-y-6 text-lg font-medium">
+            {[
+              { name: "About Us", href: "#about" },
+              { name: "Services", href: "#services" },
+              { name: "Projects", href: "#projects" },
+              { name: "Reviews", href: "#reviews" },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="hover:text-green-400 transition-colors"
+                onClick={() => setIsSidebarOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
           </nav>
         </div>
       </div>

@@ -81,7 +81,7 @@ export default function Body() {
             <h1
               className="
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-                font-bold leading-tight
+                font-outfit leading-tight
               "
             >
               Turning idea into <br />
@@ -111,7 +111,7 @@ export default function Body() {
               className="
                 absolute bottom-3 sm:bottom-4 left-3 sm:left-4
                 bg-[#0d6358] text-black px-3 sm:px-4 py-1.5 sm:py-2
-                rounded-md font-medium text-xs sm:text-sm
+                rounded-md font-outfit text-xs sm:text-sm
               "
             >
               A Creative Design <br /> Agency
@@ -148,10 +148,7 @@ export default function Body() {
                 text-start
               "
             >
-              We are a national team, but our creative challenges are well
-              recognized. By dedicating ourselves to the world with our best
-              minds, we strive to stand out as cutting-edge innovators in the
-              media—always with purpose.
+              Nexign Studio thrives on creative challenges. We're a forward-thinking team dedicated to delivering design that's sharp, intentional, and impossible to ignore. Through Graphic Design and Social Media Management, we help brands stand out with purpose and precision.
             </p>
           </div>
 

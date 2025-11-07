@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section
       className="
-        bg-white px-4 sm:px-6 md:px-20 py-12 sm:py-16 relative overflow-hidden
+        bg-white px-4 sm:px-6 md:px-20 py-5 sm:py-16 relative overflow-hidden
         rounded-bl-[60px] sm:rounded-bl-[100px] md:rounded-bl-[150px]
         rounded-br-[60px] sm:rounded-br-[100px] md:rounded-br-[150px]
         opacity-90 sm:opacity-100 transition-opacity
@@ -36,12 +36,11 @@ const HeroSection = () => {
       <h1
         className="
           text-[#0d6358] text-center text-3xl sm:text-4xl md:text-6xl
-          font-bold leading-tight mb-10 sm:mb-16 max-w-5xl mx-auto
+          font-outfit leading-tight mb-10 sm:mb-16 max-w-5xl mx-auto
           pt-8 sm:pt-0
         "
       >
-        Empowering Brands <br className="hidden sm:block" /> Through Creative
-        Solutions
+        Empowering Brands <br className="hidden sm:block" /> Through Design That Speaks
       </h1>
 
       <div
@@ -52,10 +51,8 @@ const HeroSection = () => {
       >
         {/* Left: paragraph + button */}
         <div className="flex flex-col space-y-6 text-center md:text-left">
-          <p className="text-[#0d6358] text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
-            From web development to branding, we deliver innovative strategies
-            that elevate your brand and drive growth. Let's create something
-            exceptional together.
+          <p className="text-[#0d6358] font-outfit text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
+            At Nexign Studio, we create design that tells your story. From scroll-stopping social content to premium graphics — every piece is intentional, clear, and boldly creative. We specialize in Graphic Design and Social Media Management, making brands look cohesive and unforgettable.
           </p>
           <button
             className="
@@ -83,7 +80,7 @@ const HeroSection = () => {
             <button
               className="
                 px-4 sm:px-6 py-2 rounded-full bg-[#073a2d] text-text-[#0d6358]
-                font-semibold hover:bg-[#023530] transition text-sm sm:text-base
+                font-outfit hover:bg-[#023530] transition text-sm sm:text-base
               "
             >
               Start Your Project
@@ -91,7 +88,7 @@ const HeroSection = () => {
             <button
               className="
                 px-4 sm:px-6 py-2 border border-white/50 text-white
-                rounded-full hover:bg-white/10 transition font-medium text-sm sm:text-base
+                rounded-full hover:bg-white/10 transition font-outfit text-sm sm:text-base
               "
             >
               Let's Collaborate
@@ -109,10 +106,10 @@ const HeroSection = () => {
             ))}
           </div>
           <div className="text-center md:text-right">
-            <p className="text-2xl sm:text-3xl font-bold text-[#0d6358] leading-tight">
-              10 Years
+            <p className="text-2xl sm:text-3xl font-outfit text-[#0d6358] leading-tight">
+              4+ Years
             </p>
-            <p className="text-[#0d6358] text-sm sm:text-base font-medium leading-tight">
+            <p className="text-[#0d6358] text-sm sm:text-base font-outfit leading-tight">
               Experience
             </p>
           </div>
