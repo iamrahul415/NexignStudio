@@ -36,7 +36,7 @@ const HeroSection = () => {
       <h1
         className="
           text-[#0d6358] text-center text-3xl sm:text-4xl md:text-6xl
-          font-outfit leading-tight mb-10 sm:mb-16 max-w-5xl mx-auto
+          font-semibold leading-tight mb-10 sm:mb-16 max-w-5xl mx-auto
           pt-8 sm:pt-0
         "
       >
@@ -52,7 +52,7 @@ const HeroSection = () => {
         {/* Left: paragraph + button */}
         <div className="flex flex-col space-y-6 text-center md:text-left">
           <p className="text-[#0d6358] font-outfit text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
-            At Nexign Studio, we create design that tells your story. From scroll-stopping social content to premium graphics — every piece is intentional, clear, and boldly creative. We specialize in Graphic Design and Social Media Management, making brands look cohesive and unforgettable.
+            Nexign Studio thrives on creative challenges. We're a forward-thinking team dedicated to delivering design that's sharp, intentional, and impossible to ignore. Through Graphic Design and Social Media Management, we help brands stand out with purpose and precision.
           </p>
           <button
             className="

@@ -17,11 +17,11 @@ const InnovateInspireCreate = () => {
           font-outfit text-center
         "
       >
-        <span>Innovate</span>
+        <span>Design</span>
         <span className="text-lime-400 text-3xl sm:text-4xl md:text-5xl">✦</span>
-        <span>Inspire</span>
+        <span>Capture</span>
         <span className="text-lime-400 text-3xl sm:text-4xl md:text-5xl">✦</span>
-        <span>Create</span>
+        <span>Connect</span>
       </div>
 
       {/* Bottom Divider */}

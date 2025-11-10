@@ -109,15 +109,6 @@ export default function Body() {
             />
             <div
               className="
-                absolute bottom-3 sm:bottom-4 left-3 sm:left-4
-                bg-[#0d6358] text-black px-3 sm:px-4 py-1.5 sm:py-2
-                rounded-md font-outfit text-xs sm:text-sm
-              "
-            >
-              A Creative Design <br /> Agency
-            </div>
-            <div
-              className="
                 absolute top-2 sm:top-4 -left-3 sm:-left-4
                 text-[#0d6358] text-3xl sm:text-4xl
               "
@@ -148,7 +139,7 @@ export default function Body() {
                 text-start
               "
             >
-              Nexign Studio thrives on creative challenges. We're a forward-thinking team dedicated to delivering design that's sharp, intentional, and impossible to ignore. Through Graphic Design and Social Media Management, we help brands stand out with purpose and precision.
+              At Nexign Studio, we create design that tells your story. From scroll-stopping social content to premium graphics. Every piece is intentional, clear, and boldly creative. We specialise in Graphic Design and Social Media Management, making brands look cohesive and unforgettable. And in this nexign mockup
             </p>
           </div>
 

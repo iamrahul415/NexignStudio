@@ -4,10 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function OurServices() {
   const services = [
-    { id: "01", title: "UI/UX Design" },
-    { id: "02", title: "Web Development" },
-    { id: "03", title: "3D Design" },
-    { id: "04", title: "Motion Graphics" },
+    { id: "01", title: "Logo and Branding" },
+    { id: "02", title: "Graphic Designing" },
+    { id: "03", title: "Product & Packaging Design" },
+    { id: "04", title: "Social Media Manaagement" },
   ];
 
   return (
@@ -83,7 +83,7 @@ export default function OurServices() {
 
           {/* LEFT: Service List */}
           <div className="lg:col-span-4 flex flex-col justify-start space-y-6 animate-fade-in-left">
-            <h2 className="text-3xl md:text-5xl font-outfit text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl font-outfit font-semibold text-white leading-tight">
               Our{" "}
               <span className="bg-[#073b2e] text-white px-2 rounded-md inline-block transform -skew-x-12 hover:skew-x-0 transition-transform duration-300">
                 Services
@@ -148,7 +148,7 @@ export default function OurServices() {
               </p>
               <div className="flex items-center gap-3">
                 <span className="font-outfit text-white text-sm group-hover:text-lime-400">
-                  See how we work
+                  Design portfolio
                 </span>
                 <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-black group-hover:text-lime-400 group-hover:-rotate-45 transition-transform duration-300" />
@@ -164,11 +164,12 @@ export default function OurServices() {
               hover:-translate-y-1 transition-all duration-300 group cursor-pointer
             ">
               <p className="text-gray-100 mb-4 text-sm leading-relaxed">
-                Looking for design experts who can bring your vision to life?
+                 Want to level up your social media game? Let's turn your vision into scroll-stopping content! ✨
+
               </p>
               <div className="flex items-center gap-3">
                 <span className="font-outfit text-white text-sm group-hover:text-lime-400">
-                  Meet our experts
+                  Social Media Management
                 </span>
                 <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-black group-hover:text-lime-400 group-hover:-rotate-45 transition-transform duration-300" />

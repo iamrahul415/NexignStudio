@@ -106,7 +106,7 @@ const Reviews = () => {
             {counts.hours}<span className="text-[#073b2e]">+</span>
           </p>
           <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
-            Design asset delivered
+            Design Assets Delivered
           </p>
         </div>
 
@@ -116,7 +116,7 @@ const Reviews = () => {
             {counts.revenue}<span className="text-[#073b2e]">+</span>
           </p>
           <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
-            Multinational company worked with
+            Multinational Projects
           </p>
         </div>
       </div>

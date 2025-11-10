@@ -8,16 +8,16 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:justify-between gap-8">
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl font-outfit mb-4">
-              Get in Touch Today!
+              Ready to Stand Out?
             </h2>
             <p className="text-gray-300 text-base sm:text-lg mb-6 max-w-md mx-auto md:mx-0">
-              Ready to take your business to the next level? Let's discuss how
-              we can help you achieve your goals with our innovative solutions.
+              Stop blending in. Let's craft a brand and social presence that turns heads and drives results. Hit us up and let's talk strategy.
+
             </p>
             <button
               className="bg-[#0d5a52] hover:bg-[#073b2e] text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-outfit transition-colors duration-300"
               onClick={() =>
-                window.open("https://wa.me/919102246263", "_blank")
+                window.open("https://wa.me/918095520714", "_blank")
               }
             >
               Contact Us
@@ -43,7 +43,7 @@ const Footer = () => {
                       href="mailto:info@nexignstudio.com"
                       className="hover:text-green-500 transition-colors"
                     >
-                      info@nexignstudio.com
+                      nexignspace@gmail.com
                     </a>
                   </div>
                 </div>
@@ -58,10 +58,10 @@ const Footer = () => {
                   <div>
                     <p className="text-sm text-gray-400">Phone</p>
                     <a
-                      href="tel:+919102246263"
+                      href="tel:+918095520714"
                       className="hover:text-green-500 transition-colors"
                     >
-                      +91 9876543210
+                      +91 8095520714
                     </a>
                   </div>
                 </div>
@@ -99,17 +99,26 @@ const Footer = () => {
                 <h4 className="font-outfit mb-3 text-lg">Services</h4>
                 <ul className="space-y-2 text-[#023530] text-sm">
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Web Design
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Development
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Digital Marketing
                     </a>
                   </li>
@@ -120,17 +129,26 @@ const Footer = () => {
                 <h4 className="font-outfit mb-3 text-lg">Company</h4>
                 <ul className="space-y-2 text-[#023530] text-sm">
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Our Team
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Contact
                     </a>
                   </li>
@@ -141,12 +159,18 @@ const Footer = () => {
                 <h4 className="font-outfit mb-3 text-lg">Career</h4>
                 <ul className="space-y-2 text-[#023530] text-sm">
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Portfolio
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-[#011815] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-[#011815] transition-colors"
+                    >
                       Contact
                     </a>
                   </li>
@@ -175,19 +199,14 @@ const Footer = () => {
             <div className="border-t border-[#073b2e] pt-6 flex flex-col md:flex-row justify-between items-center">
               <div className="text-green-100 text-sm mb-4 md:mb-0 text-center md:text-left flex items-center justify-center gap-2">
                 <span>© 2025</span>
-                
-                {/* <img
-                  src="/assets/Logo1.webp"
-                  alt="Logo1"
-                  className="h-6 object-contain inline-block"
-                /> */}
                 <span>Nexign All rights reserved.</span>
               </div>
 
               <div className="flex space-x-3 sm:space-x-4">
-                {/* Facebook */}
+                {/* Instagram */}
                 <a
-                  href="#"
+                  href="https://www.instagram.com/nexign_?igsh=MTZpdTFxaWVhOGp3dg%3D%3D&utm_source=qr
+"
                   className="w-8 h-8 bg-[#0d6358] rounded-full flex items-center justify-center hover:bg-[#073b2e] transition-colors"
                 >
                   <svg
@@ -195,27 +214,13 @@ const Footer = () => {
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33V21.877C18.343 21.128 22 16.991 22 12z" />
-                  </svg>
-                </a>
-
-                {/* Twitter */}
-                <a
-                  href="#"
-                  className="w-8 h-8 bg-[#0d6358] rounded-full flex items-center justify-center hover:bg-[#073b2e] transition-colors"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-.94-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5A3.5 3.5 0 1 0 12 16a3.5 3.5 0 0 0 0-7zm4.75-.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                   </svg>
                 </a>
 
                 {/* LinkedIn */}
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/aanchal-s-jain-195b82240/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   className="w-8 h-8 bg-[#0d6358] rounded-full flex items-center justify-center hover:bg-[#073b2e] transition-colors"
                 >
                   <svg
