@@ -81,7 +81,7 @@ export default function Body() {
             <h1
               className="
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-                font-outfit leading-tight
+                font-dmSans leading-tight
               "
             >
               Turning idea into <br />
@@ -136,7 +136,7 @@ export default function Body() {
               className="
                 text-gray-300 leading-relaxed
                 text-base sm:text-lg
-                text-start
+                text-start font-dmSans
               "
             >
               At Nexign Studio, we create design that tells your story. From scroll-stopping social content to premium graphics. Every piece is intentional, clear, and boldly creative. We specialise in Graphic Design and Social Media Management, making brands look cohesive and unforgettable. And in this nexign mockup

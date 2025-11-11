@@ -80,7 +80,7 @@ const Testimonials = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-[#024d45] via-transparent to-[#012A26] opacity-40 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-10 font-outfit">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-10 font-dmSans">
           What Our Clients Say
         </h2>
 
@@ -110,14 +110,14 @@ const Testimonials = () => {
                   className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border-2 border-teal-400 object-cover shadow-md mr-3 sm:mr-4"
                 />
                 <div>
-                  <h3 className="font-semibold text-sm sm:text-base md:text-lg">{t.name}</h3>
-                  <p className="text-teal-300 text-xs sm:text-sm">{t.role}</p>
+                  <h3 className="font-semibold font-dmSans text-sm sm:text-base md:text-lg">{t.name}</h3>
+                  <p className="text-teal-300 font-dmSans text-xs sm:text-sm">{t.role}</p>
                 </div>
               </div>
 
               <Quote className="text-teal-400 opacity-70 mb-2 sm:mb-3" size={20} />
 
-              <p className="text-gray-100 text-xs sm:text-sm md:text-base leading-relaxed">
+              <p className="text-gray-100 text-xs sm:text-sm md:text-base font-dmSans leading-relaxed">
                 {t.text}
               </p>
             </div>

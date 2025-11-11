@@ -35,7 +35,7 @@ const HeroSection = () => {
       {/* Heading */}
       <h1
         className="
-          text-[#0d6358] text-center text-3xl sm:text-4xl md:text-6xl
+          text-[#0d6358] text-center text-3xl sm:text-4xl md:text-6xl font-dmSans
           font-semibold leading-tight mb-10 sm:mb-16 max-w-5xl mx-auto
           pt-8 sm:pt-0
         "
@@ -51,14 +51,14 @@ const HeroSection = () => {
       >
         {/* Left: paragraph + button */}
         <div className="flex flex-col space-y-6 text-center md:text-left">
-          <p className="text-[#0d6358] font-outfit text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
+         <p className="text-[#0d6358] font-dmSans text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
             Nexign Studio thrives on creative challenges. We're a forward-thinking team dedicated to delivering design that's sharp, intentional, and impossible to ignore. Through Graphic Design and Social Media Management, we help brands stand out with purpose and precision.
           </p>
           <button
             className="
               text-[#0d6358] px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-[#073b2e]
               rounded-full hover:bg-[#073b2e] hover:text-white transition
-              w-fit mx-auto md:mx-0 font-medium
+              w-fit mx-auto md:mx-0 font-dmSans font-medium
             "
           >
             Start Your Project
@@ -80,7 +80,7 @@ const HeroSection = () => {
             <button
               className="
                 px-4 sm:px-6 py-2 rounded-full bg-[#073a2d] text-text-[#0d6358]
-                font-outfit hover:bg-[#023530] transition text-sm sm:text-base
+                font-dmSans hover:bg-[#023530] transition text-sm sm:text-base
               "
             >
               Start Your Project
@@ -88,7 +88,7 @@ const HeroSection = () => {
             <button
               className="
                 px-4 sm:px-6 py-2 border border-white/50 text-white
-                rounded-full hover:bg-white/10 transition font-outfit text-sm sm:text-base
+                rounded-full hover:bg-white/10 transition font-dmSans text-sm sm:text-base
               "
             >
               Let's Collaborate
@@ -106,10 +106,10 @@ const HeroSection = () => {
             ))}
           </div>
           <div className="text-center md:text-right">
-            <p className="text-2xl sm:text-3xl font-outfit text-[#0d6358] leading-tight">
+            <p className="text-2xl sm:text-3xl font-dmSans text-[#0d6358] leading-tight">
               4+ Years
             </p>
-            <p className="text-[#0d6358] text-sm sm:text-base font-outfit leading-tight">
+            <p className="text-[#0d6358] text-sm sm:text-base font-dmSans leading-tight">
               Experience
             </p>
           </div>

@@ -7,7 +7,7 @@ export default function OurServices() {
     { id: "01", title: "Logo and Branding" },
     { id: "02", title: "Graphic Designing" },
     { id: "03", title: "Product & Packaging Design" },
-    { id: "04", title: "Social Media Manaagement" },
+    { id: "04", title: "Social Media Management" },
   ];
 
   return (
@@ -71,25 +71,26 @@ export default function OurServices() {
         <div
           className="
             relative bg-[#01725f]/90 backdrop-blur-lg rounded-[2rem] shadow-2xl
-            w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 sm:p-10
+            w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 p-8 sm:p-10
           "
         >
           {/* Side Label */}
           <div className="hidden lg:block absolute top-20 -left-12 rotate-[-90deg]">
-            <span className="bg-[#073a2d] text-white font-outfit px-3 py-1 text-sm tracking-wide">
+            <span className="bg-[#073a2d] text-white font-dmSans px-3 py-1 text-sm tracking-wide">
               WHAT WE DO
             </span>
           </div>
 
           {/* LEFT: Service List */}
           <div className="lg:col-span-4 flex flex-col justify-start space-y-6 animate-fade-in-left">
-            <h2 className="text-3xl md:text-5xl font-outfit font-semibold text-white leading-tight">
+            <h2 className="text-3xl md:text-5xl font-dmSans font-semibold text-white leading-tight">
               Our{" "}
               <span className="bg-[#073b2e] text-white px-2 rounded-md inline-block transform -skew-x-12 hover:skew-x-0 transition-transform duration-300">
                 Services
               </span>
             </h2>
-            <p className="text-gray-100 max-w-md text-base opacity-90">
+
+            <p className="text-gray-100 max-w-md text-base font-dmSans opacity-90">
               We craft digital experiences that inspire and empower brands to
               stand out.
             </p>
@@ -100,17 +101,30 @@ export default function OurServices() {
                   key={i}
                   style={{ animationDelay: `${i * 0.1}s` }}
                   className="
-                    flex justify-between items-center px-5 py-3 rounded-full
-                    border border-lime-400/40 text-lime-300/70 hover:text-white
-                    hover:border-lime-400 hover:bg-lime-400/10 transition-all duration-300
+                    w-full flex justify-between items-center 
+                    px-5 py-3 rounded-full
+
+                    border border-lime-400/40 text-lime-300/70
+                    hover:text-white hover:border-lime-400 hover:bg-lime-400/10
+                    transition-all duration-300
+
                     hover:shadow-[0_0_20px_rgba(163,255,194,0.15)]
                     transform hover:scale-105 animate-fade-in-left
+
+                    sm:w-[90%] sm:mx-auto
                   "
                 >
-                  <span className="font-outfit text-base">
+                  <span className="font-dmSans text-base text-left leading-snug">
                     {service.id}. {service.title}
                   </span>
-                  <div className="w-9 h-9 flex items-center justify-center bg-[#0d6358] rounded-full hover:scale-110 hover:-rotate-45 transition-transform duration-300">
+
+                  <div
+                    className="
+                      w-9 h-9 flex items-center justify-center bg-[#0d6358]
+                      rounded-full hover:scale-110 hover:-rotate-45
+                      transition-transform duration-300
+                    "
+                  >
                     <ArrowRight className="w-4 h-4 text-lime-400" />
                   </div>
                 </button>
@@ -120,7 +134,7 @@ export default function OurServices() {
 
           {/* CENTER: Image */}
           <div className="lg:col-span-4 flex justify-center items-start animate-fade-in-up">
-            <div className="relative group mt-20">
+            <div className="relative group mt-10 sm:mt-20">
               <div className="absolute inset-0 bg-lime-400/20 rounded-2xl blur-xl group-hover:bg-lime-400/30 transition-all duration-500"></div>
               <img
                 src="/assets/ServicesImg.jpg"
@@ -135,19 +149,21 @@ export default function OurServices() {
           </div>
 
           {/* RIGHT: Info Cards */}
-          <div className="lg:col-span-4 flex flex-col justify-start gap-6 animate-fade-in-right mt-20">
+          <div className="lg:col-span-4 flex flex-col justify-start gap-6 animate-fade-in-right mt-10 sm:mt-20">
             {/* Card 1 */}
-            <div className="
+            <div
+              className="
               bg-[#0d5a52]/90 backdrop-blur-md rounded-2xl p-6 flex flex-col
               border border-lime-400/20 hover:border-lime-400/60
               hover:shadow-[0_0_30px_rgba(163,255,194,0.1)]
               hover:-translate-y-1 transition-all duration-300 group cursor-pointer
-            ">
+            "
+            >
               <p className="text-gray-100 mb-4 text-sm leading-relaxed">
                 Ever wondered how design magic happens?
               </p>
               <div className="flex items-center gap-3">
-                <span className="font-outfit text-white text-sm group-hover:text-lime-400">
+                <span className="font-dmSans text-white text-sm group-hover:text-lime-400">
                   Design portfolio
                 </span>
                 <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
@@ -157,19 +173,21 @@ export default function OurServices() {
             </div>
 
             {/* Card 2 */}
-            <div className="
+            <div
+              className="
               bg-[#0d5a52]/90 backdrop-blur-md rounded-2xl p-6 flex flex-col
               border border-lime-400/20 hover:border-lime-400/60
               hover:shadow-[0_0_30px_rgba(163,255,194,0.1)]
               hover:-translate-y-1 transition-all duration-300 group cursor-pointer
-            ">
+            "
+            >
               <p className="text-gray-100 mb-4 text-sm leading-relaxed">
-                 Want to level up your social media game? Let's turn your vision into scroll-stopping content! ✨
-
+                Want to level up your social media game? Let's turn your vision
+                into scroll-stopping content! ✨
               </p>
               <div className="flex items-center gap-3">
-                <span className="font-outfit text-white text-sm group-hover:text-lime-400">
-                  Social Media Management
+                <span className="font-dmSans text-white text-sm group-hover:text-lime-400">
+                  Social Media  Management
                 </span>
                 <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-black group-hover:text-lime-400 group-hover:-rotate-45 transition-transform duration-300" />

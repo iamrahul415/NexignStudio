@@ -14,7 +14,7 @@ const InnovateInspireCreate = () => {
           flex flex-wrap justify-center items-center
           space-x-3 sm:space-x-6 md:space-x-12
           text-2xl sm:text-3xl md:text-5xl
-          font-outfit text-center
+          font-dmSans text-center
         "
       >
         <span>Design</span>

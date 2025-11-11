@@ -17,7 +17,7 @@ export default function NavigationBanner() {
             {[...items, ...items].map((item, index) => (
               <div key={index} className="flex items-center gap-6">
                 <div className="flex-shrink-0 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#ffffff10] shadow-lg">
-                  <span className="text-white text-lg sm:text-2xl lg:text-3xl font-outfit">
+                  <span className="text-white text-lg sm:text-2xl lg:text-3xl font-dmSans">
                     {item}
                   </span>
                 </div>

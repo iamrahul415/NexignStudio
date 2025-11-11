@@ -82,7 +82,7 @@ const Reviews = () => {
 
         {/* Stat 1 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+          <p className="text-xl sm:text-3xl md:text-5xl font-dmSans text-[#073b2e]">
             {counts.companies}<span className="text-[#073b2e]">+</span>
           </p>
           <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
@@ -92,7 +92,7 @@ const Reviews = () => {
 
         {/* Stat 2 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+          <p className="text-xl sm:text-3xl md:text-5xl font-dmSans text-[#073b2e]">
             {counts.years}<span className="text-[#023530]">+</span>
           </p>
           <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
@@ -102,7 +102,7 @@ const Reviews = () => {
 
         {/* Stat 3 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+          <p className="text-xl sm:text-3xl md:text-5xl font-dmSans text-[#073b2e]">
             {counts.hours}<span className="text-[#073b2e]">+</span>
           </p>
           <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">
@@ -112,7 +112,7 @@ const Reviews = () => {
 
         {/* Stat 4 */}
         <div className="flex flex-col items-center text-center flex-1 relative z-10">
-          <p className="text-xl sm:text-3xl md:text-5xl font-outfit text-[#073b2e]">
+          <p className="text-xl sm:text-3xl md:text-5xl font-dmSans text-[#073b2e]">
             {counts.revenue}<span className="text-[#073b2e]">+</span>
           </p>
           <p className="text-[#073b2e] text-[10px] sm:text-sm md:text-base mt-1">

@@ -28,7 +28,7 @@ const Navbar = () => {
             </button>
 
             {/* Desktop Left Nav */}
-            <nav className="hidden md:flex items-center space-x-14 text-lg font-outfit">
+            <nav className="hidden md:flex items-center space-x-14 text-lg font-dmSans">
               <a
                 href="#about"
                 className="hover:text-[#023530] transition-colors"
@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section - Desktop Only */}
-          <nav className="hidden md:flex items-center space-x-14 text-lg font-outfit">
+          <nav className="hidden md:flex items-center space-x-14 text-lg font-dmSans">
             <a
               href="#projects"
               className="hover:text-[#023530] transition-colors"
@@ -105,7 +105,7 @@ const Navbar = () => {
           </div>
 
           {/* Sidebar Links */}
-          <nav className="flex flex-col space-y-6 text-lg font-medium">
+          <nav className="flex flex-col space-y-6 text-lg font-dmSans">
             {[
               { name: "About Us", href: "#about" },
               { name: "Services", href: "#services" },
