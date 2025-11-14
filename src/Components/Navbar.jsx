@@ -14,8 +14,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full flex justify-center mt-3 bg-white">
-        <div className="flex items-center justify-between bg-white text-[#073a2d] rounded-full px-4 py-3 w-[90%] max-w-[75rem] relative shadow-sm">
+      <header className="w-full flex justify-center bg-[#ffebd8]">
+        <div className="flex items-center justify-between bg-[#ffebd8] text-[#073a2d] rounded-full px-4 py-3 w-[90%] max-w-[75rem] relative shadow-sm">
           {/* Left Section - Mobile Menu / Left Nav */}
           <div className="flex items-center">
             {/* Mobile Menu Button */}
@@ -47,7 +47,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 justify-end w-auto md:w-auto">
             <img
-              src="/assets/Logo1.jpg"
+              src="/assets/Logo2.png"
               alt="Logo"
               className="h-10 w-auto object-contain"
             />
@@ -81,7 +81,7 @@ const Navbar = () => {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white text-[#023530] z-50 transform transition-transform duration-300 ease-in-out shadow-lg md:hidden ${
+        className={`fixed top-0 left-0 h-full w-64 bg-[#ffebd8] text-[#023530] z-50 transform transition-transform duration-300 ease-in-out shadow-lg md:hidden ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -98,7 +98,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center justify-start mb-10">
             <img
-              src="/assets/Logo1.jpg"
+              src="/assets/Logo2.png"
               alt="Logo"
               className="h-8 w-auto object-contain"
             />

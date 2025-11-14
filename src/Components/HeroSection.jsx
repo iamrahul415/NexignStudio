@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section
       className="
-        bg-white px-4 sm:px-6 md:px-20 py-5 sm:py-16 relative overflow-hidden
+        bg-[#ffebd8] px-4 sm:px-6 md:px-20 py-5 sm:py-16 relative overflow-hidden
         rounded-bl-[60px] sm:rounded-bl-[100px] md:rounded-bl-[150px]
         rounded-br-[60px] sm:rounded-br-[100px] md:rounded-br-[150px]
         opacity-90 sm:opacity-100 transition-opacity

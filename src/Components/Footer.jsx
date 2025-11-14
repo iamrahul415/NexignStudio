@@ -74,12 +74,12 @@ const Footer = () => {
       {/* Green Footer */}
       <div className="bg-[#023530] px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-white text-[#023530] rounded-2xl p-8 sm:p-12">
+          <div className="bg-[#ffebd8] text-[#023530] rounded-2xl p-8 sm:p-12">
             {/* Top Section - Logo and Description */}
             <div className="flex flex-col md:flex-row justify-between items-start mb-10 text-center md:text-left">
               <div className="mb-4 md:mb-0 w-full md:w-auto">
                 <img
-                  src="/assets/Logo1.jpg"
+                  src="/assets/Logo2.png"
                   alt="Logo1"
                   className="h-10 object-contain mx-auto md:mx-0"
                 />

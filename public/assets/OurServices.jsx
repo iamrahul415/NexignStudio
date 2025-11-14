@@ -122,7 +122,7 @@ export default function OurServices() {
             <div className="flex items-center gap-3 mt-4">
               <span className="font-bold text-white">See how we works</span>
               <div
-                className="w-8 h-8 flex items-center justify-center bg-white rounded-full 
+                className="w-8 h-8 flex items-center justify-center bg-[#ffebd8] rounded-full 
                       transition-all duration-300 transform hover:bg-gray-300  group"
               >
                 <ArrowRight className="w-5 h-5 text-black transition-transform duration-300 group-hover:-rotate-45" />
@@ -139,7 +139,7 @@ export default function OurServices() {
             <div className="flex items-center gap-3 mt-4">
               <span className="font-bold">Meet our Expert</span>
               <div
-                className="w-8 h-8 flex items-center justify-center bg-white rounded-full 
+                className="w-8 h-8 flex items-center justify-center bg-[#ffebd8] rounded-full 
                       transition-all duration-300 transform hover:bg-black hover:text-white group"
               >
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:-rotate-45" />

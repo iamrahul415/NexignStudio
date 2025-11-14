@@ -166,7 +166,7 @@ export default function OurServices() {
                 <span className="font-dmSans text-white text-sm group-hover:text-lime-400">
                   Design portfolio
                 </span>
-                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
+                <div className="w-8 h-8 flex items-center justify-center bg-[#ffebd8] rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-black group-hover:text-lime-400 group-hover:-rotate-45 transition-transform duration-300" />
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function OurServices() {
                 <span className="font-dmSans text-white text-sm group-hover:text-lime-400">
                   Social Media  Management
                 </span>
-                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
+                <div className="w-8 h-8 flex items-center justify-center bg-[#ffebd8] rounded-full group-hover:bg-[#073a2d] group-hover:scale-110 transition-all duration-300">
                   <ArrowRight className="w-4 h-4 text-black group-hover:text-lime-400 group-hover:-rotate-45 transition-transform duration-300" />
                 </div>
               </div>
