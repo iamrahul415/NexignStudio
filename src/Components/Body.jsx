@@ -1,5 +1,3 @@
-// src/components/Body.jsx
-"use client";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function Body() {
@@ -54,12 +52,13 @@ export default function Body() {
       id="about"
       className="
         bg-[#023530] text-white min-h-screen flex flex-col justify-center
-        px-4 sm:px-6 md:px-16 py-10 md:py-0
+        py-10 md:py-0
       "
     >
-      {/* Content Grid */}
+      {/* Content Grid - Container with navbar width */}
       <div
         className="
+          max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full
           grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12
           items-start
         "
@@ -139,7 +138,7 @@ export default function Body() {
                 text-start font-dmSans
               "
             >
-              At Nexign Studio, we create design that tells your story. From scroll-stopping social content to premium graphics. Every piece is intentional, clear, and boldly creative. We specialise in Graphic Design and Social Media Management, making brands look cohesive and unforgettable. And in this nexign mockup
+              At Nexign Studio, we create design that tells your story. From scroll-stopping social content to premium graphics. Every piece is intentional, clear, and boldly creative. We specialise in Graphic Design and Social Media Management, making brands look cohesive and unforgettable.
             </p>
           </div>
 

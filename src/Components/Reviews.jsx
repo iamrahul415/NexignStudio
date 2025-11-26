@@ -71,7 +71,7 @@ const Reviews = () => {
     <section ref={sectionRef} className="flex justify-center px-4 sm:px-6 py-12 sm:py-16 bg-[#023530] relative">
       <div
         className="
-          backdrop-blur-md bg-[#ffebd8] rounded-[40px] shadow-xl
+          backdrop-blur-md bg-[#faf6f0] rounded-[40px] shadow-xl
           flex flex-row justify-around items-center
           gap-4 sm:gap-6 md:gap-16
           px-4 sm:px-8 md:px-6 py-6 sm:py-8 max-w-[95%] sm:max-w-[90%] w-full relative overflow-hidden

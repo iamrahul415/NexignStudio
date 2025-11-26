@@ -1,131 +1,207 @@
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Menu, X, Mail, MapPin, ExternalLink, MessageCircle, Instagram, Linkedin } from "lucide-react";
 
-const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
 
-  // Prevent background scroll when sidebar is open
-  useEffect(() => {
-    document.body.style.overflow = isSidebarOpen ? "hidden" : "unset";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isSidebarOpen]);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setShowContactModal(true);
+    setIsOpen(false);
+  };
+
+  const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Contact", href: "#contact", onClick: handleContactClick },
+  ];
 
   return (
     <>
-      <header className="w-full flex justify-center bg-[#ffebd8]">
-        <div className="flex items-center justify-between bg-[#ffebd8] text-[#073a2d] rounded-full px-4 py-3 w-[90%] max-w-[75rem] relative shadow-sm">
-          {/* Left Section - Mobile Menu / Left Nav */}
-          <div className="flex items-center">
+      <nav className="bg-[#faf6f0] shadow-lg sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16 md:h-20">
+            {/* Logo Section */}
+            <div className="flex-shrink-0 group cursor-pointer">
+              <img
+                src="/assets/logo.png"
+                alt="Logo"
+                className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center space-x-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={link.onClick}
+                  className="px-4 py-2 text-[#073b2e] hover:text-[#073a2d] font-dmSans font-medium text-base transition-all duration-300 relative group"
+                >
+                  {link.label}
+                  <span
+                    className="absolute bottom-0 left-0 w-0 h-0.5 
+                    bg-gradient-to-r from-[#0d5a52]  via-[#073b2e] to-[#023530] 
+                    group-hover:w-full transition-all duration-300"
+                  ></span>
+                </a>
+              ))}
+            </div>
+
+            {/* CTA Button - Desktop */}
+            <div className="hidden md:flex items-center space-x-4">
+              <button className="px-6 py-2 bg-gradient-to-r from-[#0d5a52] via-[#0d6358] to-[#023530] text-white font-medium rounded-lg hover:from-[#0d6358] hover:via-[#073b2e] hover:to-[#023530] transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+            </div>
+
             {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={toggleMenu}
+                className="inline-flex items-center justify-center p-2 rounded-lg text-[#073b2e] hover:text-white hover:bg-[#faf6f0] transition-all duration-300"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {isOpen ? (
+                  <X className="block h-6 w-6 text-[#073b2e]" />
+                ) : (
+                  <Menu className="block h-6 w-6 text-[#073b2e]" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div
+            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+              isOpen ? "max-h-64" : "max-h-0"
+            }`}
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#faf6f0] rounded-lg mt-2 mb-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={link.onClick}
+                  className="block px-4 py-2 text-[#073b2e] hover:text-white hover:bg-slate-700 font-medium rounded-lg transition-all duration-300"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <button className="px-6 py-2 bg-gradient-to-r from-[#0d5a52] via-[#0d6358] to-[#023530] text-white font-dmSans rounded-lg hover:from-[#0d6358] hover:via-[#073b2e] hover:to-[#023530] transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Contact Modal */}
+      {showContactModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 animate-fadeIn">
+            {/* Close Button */}
             <button
-              onClick={() => setIsSidebarOpen(true)}
-              className="md:hidden text-[#073a2d] hover:text-[#023530] transition-colors"
-              aria-label="Open menu"
+              onClick={() => setShowContactModal(false)}
+              className="float-right text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <Menu size={28} />
+              <X className="h-6 w-6" />
             </button>
 
-            {/* Desktop Left Nav */}
-            <nav className="hidden md:flex items-center space-x-14 text-lg font-dmSans">
-              <a
-                href="#about"
-                className="hover:text-[#023530] transition-colors"
-              >
-                About Us
-              </a>
-              <a
-                href="#services"
-                className="hover:text-[#023530] transition-colors"
-              >
-                Services
-              </a>
-            </nav>
-          </div>
+            {/* Title */}
+            <h2 className="text-2xl font-bold text-[#073b2e] mb-6 clear-both">
+              GET IN TOUCH WITH US
+            </h2>
 
-          {/* Logo */}
-          <div className="flex items-center md:absolute md:left-1/2 md:transform md:-translate-x-1/2 justify-end w-auto md:w-auto">
-            <img
-              src="/assets/Logo2.png"
-              alt="Logo"
-              className="h-10 w-auto object-contain"
-            />
-          </div>
+            {/* Contact Details */}
+            <div className="space-y-4">
+              {/* Email */}
+              <div className="flex items-start space-x-3">
+                <Mail className="h-5 w-5 text-[#0d5a52] flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-gray-600 text-sm font-medium">Email</p>
+                  <a
+                    href="mailto:nexignspace@gmail.com"
+                    className="text-[#073b2e] font-semibold hover:text-[#0d5a52] transition-colors break-all"
+                  >
+                    nexignspace@gmail.com
+                  </a>
+                </div>
+              </div>
 
-          {/* Right Section - Desktop Only */}
-          <nav className="hidden md:flex items-center space-x-14 text-lg font-dmSans">
-            <a
-              href="#projects"
-              className="hover:text-[#023530] transition-colors"
+              {/* WhatsApp */}
+              <div className="flex items-start space-x-3">
+                <MessageCircle className="h-5 w-5 text-[#0d5a52] flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-gray-600 text-sm font-medium">WhatsApp</p>
+                  <a
+                    href="https://wa.me/918095520714"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#073b2e] font-semibold hover:text-[#0d5a52] transition-colors"
+                  >
+                    +91 8095520714
+                  </a>
+                </div>
+              </div>
+
+              {/* Instagram */}
+              <div className="flex items-start space-x-3">
+                <Instagram className="h-5 w-5 text-[#0d5a52] flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-gray-600 text-sm font-medium">Instagram</p>
+                  <a
+                    href="https://www.instagram.com/nexign_?igsh=MTZpdTFxaWVhOGp3dg%3D%3D&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#073b2e] font-semibold hover:text-[#0d5a52] transition-colors"
+                  >
+                    @nexign_
+                  </a>
+                </div>
+              </div>
+
+              {/* LinkedIn */}
+              <div className="flex items-start space-x-3">
+                <Linkedin className="h-5 w-5 text-[#0d5a52] flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-gray-600 text-sm font-medium">LinkedIn</p>
+                  <a
+                    href="https://www.linkedin.com/in/aanchal-s-jain-195b82240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#073b2e] font-semibold hover:text-[#0d5a52] transition-colors"
+                  >
+                    Aanchal S Jain
+                  </a>
+                </div>
+              </div>
+
+              {/* Location */}
+              <div className="flex items-start space-x-3">
+                <MapPin className="h-5 w-5 text-[#0d5a52] flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-gray-600 text-sm font-medium">Location</p>
+                  <p className="text-[#073b2e] font-semibold">Bangalore</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setShowContactModal(false)}
+              className="w-full mt-8 px-4 py-2 bg-gradient-to-r from-[#0d5a52] via-[#0d6358] to-[#023530] text-white font-medium rounded-lg hover:from-[#0d6358] hover:via-[#073b2e] hover:to-[#023530] transition-all duration-300"
             >
-              Projects
-            </a>
-            <a
-              href="#reviews"
-              className="hover:text-[#023530] transition-colors"
-            >
-              Reviews
-            </a>
-          </nav>
+              Close
+            </button>
+          </div>
         </div>
-      </header>
-
-      {/* Overlay */}
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300"
-          onClick={() => setIsSidebarOpen(false)}
-        />
       )}
-
-      {/* Mobile Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-[#ffebd8] text-[#023530] z-50 transform transition-transform duration-300 ease-in-out shadow-lg md:hidden ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        <div className="p-6 relative">
-          {/* Close Button */}
-          <button
-            onClick={() => setIsSidebarOpen(false)}
-            className="absolute top-6 right-6 text-[#023530] hover:text-green-400 transition-colors"
-            aria-label="Close menu"
-          >
-            <X size={26} />
-          </button>
-
-          {/* Logo */}
-          <div className="flex items-center justify-start mb-10">
-            <img
-              src="/assets/Logo2.png"
-              alt="Logo"
-              className="h-8 w-auto object-contain"
-            />
-          </div>
-
-          {/* Sidebar Links */}
-          <nav className="flex flex-col space-y-6 text-lg font-dmSans">
-            {[
-              { name: "About Us", href: "#about" },
-              { name: "Services", href: "#services" },
-              { name: "Projects", href: "#projects" },
-              { name: "Reviews", href: "#reviews" },
-            ].map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="hover:text-green-400 transition-colors"
-                onClick={() => setIsSidebarOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
     </>
   );
-};
-
-export default Navbar;
+}

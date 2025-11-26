@@ -74,21 +74,19 @@ const Footer = () => {
       {/* Green Footer */}
       <div className="bg-[#023530] px-4 sm:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-[#ffebd8] text-[#023530] rounded-2xl p-8 sm:p-12">
+          <div className="bg-[#faf6f0] text-[#023530] rounded-2xl p-8 sm:p-12">
             {/* Top Section - Logo and Description */}
             <div className="flex flex-col md:flex-row justify-between items-start mb-10 text-center md:text-left">
               <div className="mb-4 md:mb-0 w-full md:w-auto">
                 <img
-                  src="/assets/Logo2.png"
+                  src="/assets/logo.png"
                   alt="Logo1"
                   className="h-10 object-contain mx-auto md:mx-0"
                 />
               </div>
               <div className="max-w-sm w-full md:w-auto mx-auto md:mx-0">
                 <p className="text-[#023530] text-sm font-dmSans leading-relaxed">
-                  Innovative solutions for modern businesses. We help companies
-                  transform their digital presence and achieve sustainable
-                  growth.
+                  Empowering Brands Through Design That Speaks
                 </p>
               </div>
             </div>
@@ -103,7 +101,7 @@ const Footer = () => {
                       href="#"
                       className="hover:text-[#011815] transition-colors font-dmSans"
                     >
-                      Web Design
+                      Logo & Branding
                     </a>
                   </li>
                   <li>
@@ -111,7 +109,7 @@ const Footer = () => {
                       href="#"
                       className="hover:text-[#011815] transition-colors font-dmSans"
                     >
-                      Development
+                      Graphic Designing
                     </a>
                   </li>
                   <li>
@@ -119,7 +117,7 @@ const Footer = () => {
                       href="#"
                       className="hover:text-[#011815] transition-colors font-dmSans"
                     >
-                      Digital Marketing
+                      social Media Management
                     </a>
                   </li>
                 </ul>

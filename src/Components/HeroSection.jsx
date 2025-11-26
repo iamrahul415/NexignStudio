@@ -1,22 +1,28 @@
 import React from "react";
 
 const HeroSection = () => {
+  const imageUrl = "/assets/HeroImg.jpg";
+
   return (
     <section
       className="
-        bg-[#ffebd8] px-4 sm:px-6 md:px-20 py-5 sm:py-16 relative overflow-hidden
+        bg-[#faf6f0] px-4 sm:px-6 md:px-20 py-5 sm:py-16 relative overflow-hidden
         rounded-bl-[60px] sm:rounded-bl-[100px] md:rounded-bl-[150px]
         rounded-br-[60px] sm:rounded-br-[100px] md:rounded-br-[150px]
-        opacity-90 sm:opacity-100 transition-opacity
+        opacity-100 sm:opacity-100 transition-opacity
       "
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }}
     >
       {/* Starburst Icon - hidden on mobile, bouncing on larger screens */}
-      <div
-        className="
+      <div className="
           hidden sm:block absolute top-10 md:top-16 left-12 
           w-14 h-14 sm:w-20 sm:h-20 animate-bounceStarburst
-        "
-      >
+        ">
         <div className="relative w-full h-full flex items-start justify-center">
           {[...Array(16)].map((_, i) => (
             <div
@@ -51,7 +57,7 @@ const HeroSection = () => {
       >
         {/* Left: paragraph + button */}
         <div className="flex flex-col space-y-6 text-center md:text-left">
-         <p className="text-[#0d6358] font-dmSans text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
+          <p className="text-[#0d6358] font-dmSans text-base sm:text-lg leading-relaxed max-w-sm mx-auto md:mx-0">
             Nexign Studio thrives on creative challenges. We're a forward-thinking team dedicated to delivering design that's sharp, intentional, and impossible to ignore. Through Graphic Design and Social Media Management, we help brands stand out with purpose and precision.
           </p>
           <button
@@ -79,7 +85,7 @@ const HeroSection = () => {
           >
             <button
               className="
-                px-4 sm:px-6 py-2 rounded-full bg-[#073a2d] text-text-[#0d6358]
+                px-4 sm:px-6 py-2 rounded-full bg-[#073a2d] text-white
                 font-dmSans hover:bg-[#023530] transition text-sm sm:text-base
               "
             >
@@ -91,7 +97,7 @@ const HeroSection = () => {
                 rounded-full hover:bg-white/10 transition font-dmSans text-sm sm:text-base
               "
             >
-              Let's Collaborate
+              Schedule a consultation
             </button>
           </div>
         </div>
